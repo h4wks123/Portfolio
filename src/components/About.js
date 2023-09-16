@@ -13,9 +13,15 @@ import USC_Dept from "../images/usc-older-than-ust-Esquire-Philippines.jpg";
 import USC_logo from "../images/University_of_San_Carlos_logo.png";
 import STC_Dept from "../images/stc-dept.jpg";
 import STC_logo from "../images/STC_logo_real.png";
+import SaintPaul_Dept from '../images/StPaul_dept.jpg';
+import SaintPaul_Logo from '../images/SaintPaul_logo.png';
+
+import { MiniSquare1, MiniSquare2, MiniSquare3, MiniSquare4, MiniSquare5, MiniSquare6, MiniSquare7, MiniSquare8, MiniSquare9, MiniSquare10} from '../layouts/MiniSquare.js';
 
 const About = () => {
   const [isHovered, setIsHovered] = useState(false);
+  const [isHovered1, setIsHovered1] = useState(false);
+  const [isHovered2, setIsHovered2] = useState(false);
 
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -25,11 +31,27 @@ const About = () => {
     setIsHovered(false);
   };
 
+  const handleMouseEnter1 = () => {
+    setIsHovered1(true);
+  };
+
+  const handleMouseLeave1 = () => {
+    setIsHovered1(false);
+  };
+
+  const handleMouseEnter2 = () => {
+    setIsHovered2(true);
+  };
+
+  const handleMouseLeave2 = () => {
+    setIsHovered2(false);
+  };
+
   return (
     <div>
       <div className="flex flex-col items-center justify-center min-h-screen bg-cover bg-center bg-no-repeat relative bg-tier1">
         {/* LARGE PENTAGON WITH IMAGE*/}
-        <div className="absolute bottom-72 left-44 w-[37.5%] h-[37.5%]">
+        <div className="absolute bottom-72 left-44 w-[37.5%] h-[37.5%] transition-transform transform hover:scale-95">
           <svg
             className="drop-shadow-4xl"
             viewBox="0 0 84 84"
@@ -57,7 +79,7 @@ const About = () => {
         </div>
 
         {/* MINI BOTTOM LEFT PENTAGON WITH IMAGE*/}
-        <div className="absolute bottom-16 -left-40 w-[30%] h-[30%]">
+        <div className="absolute bottom-16 -left-40 w-[30%] h-[30%] transition-transform transform hover:scale-95">
           <svg
             className="drop-shadow-4xl"
             viewBox="0 0 84 84"
@@ -85,7 +107,7 @@ const About = () => {
         </div>
 
         {/* MINI TOP LEFT PENTAGON WITH IMAGE*/}
-        <div className="absolute top-20 -left-28 w-[25%] h-[25%]">
+        <div className="absolute top-20 -left-28 w-[25%] h-[25%] transition-transform transform hover:scale-95">
           <svg
             className="drop-shadow-4xl"
             viewBox="0 0 84 84"
@@ -114,48 +136,44 @@ const About = () => {
       </div>
 
       {/* ABOUT PAGE INTRODUCTION */}
-      <div class="absolute bottom-14 right-44 w-[36%] h-[68%]">
+      <div class="absolute bottom-6 right-44 w-[36%] h-[68%]">
         <div class="mb-6">
-          <span className="text-tier2 text-2xl">Hello </span>
-          <span className="text-tier3 text-2xl">I am</span>
+          <span className="text-tier2 text-2xl">All </span>
+          <span className="text-tier3 text-2xl">About Me</span>
         </div>
         <div class="mb-6">
           <h1 className="text-tier3 text-5xl font-bold mb-3">
             IVANNE DAVE L. BAYER
           </h1>
-          <h1 className="text-tier2 font-semibold text-2xl ">
-            Computer Science Under Graduate - Yr. 3
-          </h1>
         </div>
         <div class="mb-8">
           <h1 className="text-tier2 font-light text-1xl mb-2">
-            Ivanne is a passionate computer science student with a relentless
-            curiosity for all{" "}
+          Hello! I'm a passionate beginner in the world of programming, 
+          eager to embark
           </h1>
           <h1 className="text-tier2 font-light text-1xl mb-2">
-            things tech. From coding elegant algorithms to designing intuitive
-            user interfaces,
+          on exciting coding adventures. My journey started with a fascination 
+          for problem-
           </h1>
           <h1 className="text-tier2 font-light text-1xl mb-2">
-            he thrives on the challenge of turning ideas into functional,
-            user-friendly software.
+          solving and a determination to learn. I've dived headfirst into languages 
+          like C
           </h1>
           <h1 className="text-tier2 font-light text-1xl mb-2">
-            With a keen eye for detail and a dedication to lifelong learning, he
-            is excited to
+          and Php, constantly expanding my skills through online courses and 
+          personal
           </h1>
           <h1 className="text-tier2 font-light text-1xl mb-2">
-            share his journey and showcase all of his projects in this
-            portfolio.
+          As a lifelong learner, I'm thrilled to share my evolving portfolio, 
+          showcasing my
           </h1>
-        </div>
-        <div class="mb-6">
-          <button
-            className="bg-tier3 hover:bg-green-400 active:bg-green-400 focus:outline-none focus:ring focus:ring-green-300 
-                    rounded-md w-36 h-10 drop-shadow-3xl"
-          >
-            <h1 className="text-tier2 font-bold text-1xl">READ MORE</h1>
-          </button>
+          <h1 className="text-tier2 font-light text-1xl mb-2">
+          dedication to mastering the art of coding. Join me on this exciting 
+          ride of growth 
+          </h1>
+          <h1 className="text-tier2 font-light text-1xl mb-2">
+          and discovery!
+          </h1>
         </div>
       </div>
 
@@ -245,7 +263,8 @@ const About = () => {
             </h1>
           </div>
           <div className="flex">
-            <div className="bg-tier1 w-[30%] h-[55%] mr-4 flex flex-col items-center justify-center">
+            <div className="bg-tier1 w-[30%] h-[55%] mr-4 flex flex-col items-center 
+            justify-center transition-transform transform hover:scale-95 hover:drop-shadow-3xl rounded-lg">
               <img
                 src={Communication}
                 alt="Communication"
@@ -264,7 +283,8 @@ const About = () => {
               </p>
               <br />
             </div>
-            <div className="bg-tier1 w-[30%] h-[55%] mr-4 flex flex-col items-center justify-center">
+            <div className="bg-tier1 w-[30%] h-[55%] mr-4 flex flex-col items-center 
+            justify-center transition-transform transform hover:scale-95 hover:drop-shadow-3xl rounded-lg">
               <img
                 src={Web_Design}
                 alt="Web_Design"
@@ -282,7 +302,8 @@ const About = () => {
                 him a valuable asset to any digital project.
               </p>
             </div>
-            <div className="bg-tier1 w-[30%] h-[55%] mr-4 flex flex-col items-center justify-center">
+            <div className="bg-tier1 w-[30%] h-[55%] mr-4 flex flex-col items-center 
+            justify-center transition-transform transform hover:scale-95 hover:drop-shadow-3xl rounded-lg">
               <img
                 src={Algorithm}
                 alt="Algorithm"
@@ -312,7 +333,7 @@ const About = () => {
         </div>
 
         {/* PENTAGON #1 */}
-        <div className="absolute top-16 -left-40 w-[30%] h-[30%]">
+        <div className="absolute top-16 -left-40 w-[30%] h-[30%] transition-transform transform hover:scale-95">
           <svg
             className="drop-shadow-4xl"
             viewBox="0 0 84 84"
@@ -332,9 +353,9 @@ const About = () => {
 
         {/* PENTAGON #2 */}
         <div
-          className="absolute bottom-40 left-44 w-[30%] h-[30%]"
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
+          className="absolute bottom-40 left-44 w-[30%] h-[30%] transition-transform transform hover:scale-95"
+          onMouseEnter={handleMouseEnter1}
+          onMouseLeave={handleMouseLeave1}
         >
           <svg
             className="drop-shadow-4xl"
@@ -347,11 +368,18 @@ const About = () => {
               </clipPath>
             </defs>
 
-            <path
-              d="M22.0992 77L2.19922 42.5L22.0992 8H61.8992L81.7992 42.5L61.8992 77H22.0992Z"
-              fill="#01BE96"
-            />
-            {isHovered ? (
+            <image
+                x="0"
+                y="0"
+                width="100%"
+                height="100%"
+                href={SaintPaul_Dept}
+                clipPath="url(#pentagon-clip-path)"
+                preserveAspectRatio="xMidYMid slice"
+                style={{ opacity: isHovered1 ? 0.3 : 0.9 }}
+              />
+
+            {isHovered1 && (
               <g transform="scale(0.48)">
                 <text
                   x="88"
@@ -360,7 +388,7 @@ const About = () => {
                   text-anchor="middle"
                   className={`fill-current text-tier2 text-sm font-bold`}
                 >
-                  Saint Theresa
+                  Saint Paul
                 </text>
                 <text
                   x="88"
@@ -369,34 +397,24 @@ const About = () => {
                   text-anchor="middle"
                   className={`fill-current text-tier2 text-sm font-bold`}
                 >
-                  College of Cebu
+                  Learning Center
                 </text>
                 <image
-                  x="45"
-                  y="68"
-                  width="100%"
-                  height="100%"
-                  href={STC_logo}
+                  x="55"
+                  y="85"
+                  width="75%"
+                  height="75%"
+                  href={SaintPaul_Logo}
                   preserveAspectRatio="xMidYMid slice"
                 />
               </g>
-            ) : (
-              <image
-                x="0"
-                y="0"
-                width="100%"
-                height="100%"
-                href={STC_Dept}
-                clipPath="url(#pentagon-clip-path)"
-                preserveAspectRatio="xMidYMid slice"
-              />
             )}
           </svg>
         </div>
 
         {/* PENTAGON #3 */}
         <div
-          className="absolute top-16 left-[505px] w-[33%] h-[33%] group"
+          className="absolute top-16 left-[505px] w-[33%] h-[33%] group transition-transform transform hover:scale-95"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
@@ -411,14 +429,19 @@ const About = () => {
               </clipPath>
             </defs>
 
-            <path
-              d="M22.0992 77L2.19922 42.5L22.0992 8H61.8992L81.7992 42.5L61.8992 77H22.0992Z"
-              fill="#01BE96"
-            />
-            {isHovered ? (
+            <image
+                x="0"
+                y="0"
+                width="100%"
+                height="100%"
+                href={USC_Dept}
+                clipPath="url(#pentagon-clip-path)"
+                preserveAspectRatio="xMidYMid slice"
+                style={{ opacity: isHovered ? 0.3 : 0.9 }}
+              />
+
+            {isHovered && (
               <g transform="scale(0.45)">
-                {" "}
-                {/* Adjust the scale factor as needed */}
                 <text
                   x="92"
                   y="45"
@@ -446,25 +469,15 @@ const About = () => {
                   preserveAspectRatio="xMidYMid slice"
                 />
               </g>
-            ) : (
-              <image
-                x="0"
-                y="0"
-                width="100%"
-                height="100%"
-                href={USC_Dept}
-                clipPath="url(#pentagon-clip-path)"
-                preserveAspectRatio="xMidYMid slice"
-              />
             )}
           </svg>
         </div>
 
         {/* PENTAGON #4 */}
         <div
-          className="absolute bottom-40 right-44 w-[30%] h-[30%]"
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
+          className="absolute bottom-40 right-44 w-[30%] h-[30%] transition-transform transform hover:scale-95"
+          onMouseEnter={handleMouseEnter2}
+          onMouseLeave={handleMouseLeave2}
         >
           <svg
             className="drop-shadow-4xl"
@@ -476,18 +489,25 @@ const About = () => {
                 <path d="M22.0992 77L2.19922 42.5L22.0992 8H61.8992L81.7992 42.5L61.8992 77H22.0992Z" />
               </clipPath>
             </defs>
-
-            <path
-              d="M22.0992 77L2.19922 42.5L22.0992 8H61.8992L81.7992 42.5L61.8992 77H22.0992Z"
-              fill="#01BE96"
-            />
-            {isHovered ? (
+    
+            <image
+              x="0"
+              y="0"
+              width="100%"
+              height="100%"
+              href={STC_Dept}
+              clipPath="url(#pentagon-clip-path)"
+              preserveAspectRatio="xMidYMid slice"
+              style={{ opacity: isHovered2 ? 0.3 : 0.9 }}
+              />
+    
+            {isHovered2 && (
               <g transform="scale(0.48)">
                 <text
                   x="88"
                   y="45"
-                  dominant-baseline="middle"
-                  text-anchor="middle"
+                  dominantBaseline="middle"
+                  textAnchor="middle"
                   className={`fill-current text-tier2 text-sm font-bold`}
                 >
                   Saint Theresa
@@ -495,8 +515,8 @@ const About = () => {
                 <text
                   x="88"
                   y="65"
-                  dominant-baseline="middle"
-                  text-anchor="middle"
+                  dominantBaseline="middle"
+                  textAnchor="middle"
                   className={`fill-current text-tier2 text-sm font-bold`}
                 >
                   College of Cebu
@@ -510,22 +530,12 @@ const About = () => {
                   preserveAspectRatio="xMidYMid slice"
                 />
               </g>
-            ) : (
-              <image
-                x="0"
-                y="0"
-                width="100%"
-                height="100%"
-                href={STC_Dept}
-                clipPath="url(#pentagon-clip-path)"
-                preserveAspectRatio="xMidYMid slice"
-              />
             )}
           </svg>
-        </div>
+        </div>    
 
         {/* PENTAGON #5 */}
-        <div className="absolute top-16 -right-40 w-[30%] h-[30%] ">
+        <div className="absolute top-16 -right-40 w-[30%] h-[30%] transition-transform transform hover:scale-95">
           <svg
             className="drop-shadow-4xl"
             viewBox="0 0 84 84"
@@ -545,7 +555,24 @@ const About = () => {
       </div>
 
       {/* PROGRAMMING LANGUAGES */}
-      <div className="relative w-[100%] h-[700px] bg-tier4"></div>
+      <div className="relative w-[100%] h-[700px] bg-tier4 flex overflow-hidden">
+        <div class="mb-8 mt-24 ml-24">
+            <span className="text-tier2 text-2xl">Programming </span>
+            <span className="text-tier3 text-2xl">Tools</span>
+        </div> 
+        <div>
+          <MiniSquare1 />
+          <MiniSquare2 />
+          <MiniSquare3 />
+          <MiniSquare4 />
+          <MiniSquare5 />
+          <MiniSquare6 />
+          <MiniSquare7 />
+          <MiniSquare8 />
+          <MiniSquare9 />
+          <MiniSquare10 />
+        </div>
+      </div>
     </div>
   );
 };
