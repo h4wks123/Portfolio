@@ -3,16 +3,28 @@ import { useFormik } from "formik";
 import { toast, ToastContainer } from "react-toastify";
 import * as Yup from "yup";
 import "react-toastify/dist/ReactToastify.css";
-import { Code } from "react-content-loader";
+import { Code, Instagram } from "react-content-loader";
 
 import Navbar from "../layouts/navbar.js";
+import Shapes from "../images/3dShapesModelBG.png";
 
 function Contact() {
   const [showForm, setShowForm] = useState(false);
+  const [showImage, setShowDiv] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
 
   useEffect(() => {
     const timeout = setTimeout(() => {
       setShowForm(true);
+      setShowDiv(true);
     }, 3000);
 
     return () => clearTimeout(timeout);
@@ -111,6 +123,7 @@ function Contact() {
   });
 
   const MyListLoader = () => <Code />;
+  const MyImageLoader = () => <Instagram />;
 
   return (
     <div>
@@ -360,6 +373,25 @@ function Contact() {
         )}
       </div>
       <ToastContainer />
+      <div
+        className="absolute bg-tier1 w-[35%] h-[84%] right-28 top-20 rounded-lg flex items-center justify-center"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        {showImage ? (
+          <img
+            src={Shapes}
+            className={`w-[85%] h-[85%] transition-transform duration-300 drop-shadow-3xl transform ${
+              isHovered ? "scale-90" : "scale-100"
+            }`}
+            alt="3D Shapes"
+          />
+        ) : (
+          <div className="relative flex flex-row items-center w-[85%] h-[85%]">
+            <MyImageLoader />
+          </div>
+        )}
+      </div>
     </div>
   );
 }
